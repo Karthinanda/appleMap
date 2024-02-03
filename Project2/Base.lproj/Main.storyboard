@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4l-ng-G6I">
+                                <rect key="frame" x="0.0" y="59" width="393" height="607"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fw1-c2-yUa">
+                                <rect key="frame" x="5" y="683" width="71.333333333333329" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gqz-AD-NpS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oM-pU-Y0P">
+                                <rect key="frame" x="5" y="738" width="86" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bZS-53-chv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RoZ-47-e6A">
+                                <rect key="frame" x="84.333333333333343" y="683" width="303.66666666666663" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="56T-K6-S9T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EXV-CP-HlW">
+                                <rect key="frame" x="96" y="738" width="292" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Rvn-lh-xSW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U4l-ng-G6I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1X5-Ou-5Ge"/>
+                            <constraint firstItem="EXV-CP-HlW" firstAttribute="centerY" secondItem="4oM-pU-Y0P" secondAttribute="centerY" id="3nx-Ev-JiQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EXV-CP-HlW" secondAttribute="bottom" constant="40" id="6WZ-Yh-SPm"/>
+                            <constraint firstItem="U4l-ng-G6I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="875-OM-SOh"/>
+                            <constraint firstItem="fw1-c2-yUa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Ty0-cS-yVm"/>
+                            <constraint firstItem="EXV-CP-HlW" firstAttribute="top" secondItem="RoZ-47-e6A" secondAttribute="bottom" constant="15" id="W2o-9c-DeL"/>
+                            <constraint firstAttribute="trailing" secondItem="U4l-ng-G6I" secondAttribute="trailing" id="Y1G-UI-tER"/>
+                            <constraint firstItem="RoZ-47-e6A" firstAttribute="centerY" secondItem="fw1-c2-yUa" secondAttribute="centerY" id="Ycd-bS-pbc"/>
+                            <constraint firstItem="RoZ-47-e6A" firstAttribute="leading" secondItem="fw1-c2-yUa" secondAttribute="trailing" constant="8" id="Zkl-nk-cg2"/>
+                            <constraint firstItem="EXV-CP-HlW" firstAttribute="leading" secondItem="4oM-pU-Y0P" secondAttribute="trailing" constant="5" id="hSe-2B-wPW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EXV-CP-HlW" secondAttribute="trailing" constant="5" id="hYe-v6-LR8"/>
+                            <constraint firstItem="4oM-pU-Y0P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="pja-CX-HXf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RoZ-47-e6A" secondAttribute="trailing" constant="5" id="s0x-ee-BDR"/>
+                            <constraint firstItem="RoZ-47-e6A" firstAttribute="top" secondItem="U4l-ng-G6I" secondAttribute="bottom" constant="17" id="yjT-jK-ezF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="latitudeTextField" destination="RoZ-47-e6A" id="BTN-3K-N0G"/>
+                        <outlet property="longitudeTextField" destination="EXV-CP-HlW" id="G2Q-Gm-Y26"/>
+                        <outlet property="mapView" destination="U4l-ng-G6I" id="DXJ-zF-mGr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
